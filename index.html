@@ -12,7 +12,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://vijayraman1998.github.io/">
 <meta name="twitter:card" content="summary">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='6' fill='%23E2462B'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2016%2016'%3E%3Ccircle%20cx='8'%20cy='8'%20r='6'%20fill='%23E2462B'/%3E%3C/svg%3E">
 <script>document.documentElement.classList.add('js')</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -70,7 +70,7 @@
   .btn{font-family:var(--mono);font-size:13px;text-decoration:none;padding:11px 16px;border:1px solid var(--ink);border-radius:2px;display:inline-flex;gap:8px;align-items:center;transition:transform .15s, background .15s, color .15s}
   .btn:hover,.btn:focus-visible{transform:translateY(-2px)}
   .btn.primary{background:var(--ink);color:var(--paper)}
-  .btn.primary:hover{background:var(--signal);border-color:var(--signal);color:#fff}
+  .btn.primary:hover{background:var(--signal);border-color:var(--signal);color:var(--paper)}
   .btn:not(.primary):hover{border-color:var(--signal);color:var(--signal)}
 
   /* waveform */
@@ -251,13 +251,13 @@
   <div class="wrap">
     <div class="sec-head rv"><div class="sec-no">§01 · IMPACT</div><div><h2>Numbers from <em>live deployments.</em></h2></div></div>
     <div class="metrics rv">
-      <div class="metric"><div class="v">800K<small>/day</small></div><div class="k">Call-pipeline events on the platform (events, not calls)</div></div>
+      <div class="metric"><div class="v">~500</div><div class="k">Peak concurrent live calls on the platform</div></div>
       <div class="metric"><div class="v">70<small>%+</small></div><div class="k">Automated containment, no human transfer</div></div>
       <div class="metric"><div class="v">&lt;500<small>ms</small></div><div class="k">Final transcript to first audio byte</div></div>
       <div class="metric"><div class="v">15<small>+</small></div><div class="k">Production agent deployments</div></div>
       <div class="metric"><div class="v">50–80<small>%</small></div><div class="k">Lower cost per conversation vs a human agent (modeled per client)</div></div>
     </div>
-    <p class="footnote rv">Across 5 enterprise clients in lending, automotive and sales; client names are under NDA. Containment counts only when the caller did not need a human. The cost figure is modeled per client on that client's own call mix.</p>
+    <p class="footnote rv">Across 5 enterprise clients in lending, automotive and sales; client names are under NDA. The platform carries around 800K call-pipeline events a day. Containment counts only when the caller did not need a human. The cost figure is modeled per client on that client's own call mix.</p>
   </div>
 </section>
 
@@ -269,8 +269,8 @@
         <div class="when">JAN 2024 – PRESENT<br>Rezo.AI · Noida</div>
         <div>
           <h3>AI Platform: voice agents, end to end</h3>
-          <p>Led the AI agent work end to end: customer discovery, specification, build, deployment and iteration on live traffic. The single technical owner on each client engagement, through UAT, go-live and post-launch tuning.</p>
-          <div class="chips"><span class="chip">Azure OpenAI</span><span class="chip">RAG</span><span class="chip">Evals</span><span class="chip">Streaming voice</span><span class="chip">OpenAI · Azure · ElevenLabs · Google TTS</span><span class="chip">Java · Spring</span></div>
+          <p>Single technical owner on 15+ production voice-agent deployments for 5 enterprise clients, from discovery through UAT, go-live and post-launch tuning. Built the streaming STT → LLM → TTS pipeline (barge-in, turn-taking, under 500 ms transcript → first audio) and specified the self-serve builder that cut time to value from about 2 weeks to hours.</p>
+          <div class="chips"><span class="chip">Azure OpenAI</span><span class="chip">RAG</span><span class="chip">Evals</span><span class="chip">Streaming voice</span><span class="chip">TTS: OpenAI · Azure · ElevenLabs · Google</span><span class="chip">Java · Spring</span></div>
         </div>
       </div>
       <div class="role rv">
@@ -294,7 +294,7 @@
 
 <section id="skills">
   <div class="wrap">
-    <div class="sec-head rv"><div class="sec-no">§03 · TWO HATS</div><div><h2>One person, <em>both sides</em> of the spec.</h2><p class="lede">Product judgment and engineering are the same job for me. I decide what to build from evaluation data rather than opinion, and then I build it.</p></div></div>
+    <div class="sec-head rv"><div class="sec-no">§03 · SKILLS</div><div><h2>One person, <em>both sides</em> of the spec.</h2><p class="lede">Product judgment and engineering are the same job for me. I decide what to build from evaluation data rather than opinion, and then I build it.</p></div></div>
     <div class="hats rv">
       <div class="hat">
         <div class="tag">Product Owner</div>
@@ -313,7 +313,7 @@
           <li>Streaming STT → LLM → TTS pipeline with barge-in, interruption handling and turn-taking</li>
           <li>Multi-agent systems on Azure OpenAI with 7+ typed tools per agent and live CRM reads and writes mid-conversation</li>
           <li>Retrieval-augmented generation (RAG) on a Java stack, with evaluation sets built from real client traffic</li>
-          <li>Java and Spring microservices, 85+ REST APIs, RabbitMQ, 13+ external integrations over JWT and OAuth2</li>
+          <li>Thread-safe multi-turn session management with per-session isolation, holding 500+ concurrent conversations</li>
         </ul>
       </div>
     </div>
@@ -380,7 +380,7 @@
 
 <section id="build">
   <div class="wrap">
-    <div class="sec-head rv"><div class="sec-no">§05 · HOW I BUILD</div><div><h2>A closed loop, with a <em>human gate</em> at the end.</h2><p class="lede">The agent build pipeline I designed for production agent builds.</p></div></div>
+    <div class="sec-head rv"><div class="sec-no">§05 · HOW I BUILD</div><div><h2>A closed loop, with a <em>human gate</em> at the end.</h2><p class="lede">The pipeline I designed to take an agent from a requirements document to production.</p></div></div>
     <div class="pipe rv">
       <div class="step"><div class="n">01</div><h3>Requirements</h3><p>A requirements document goes in: scope, tools, escalation rules, success metric.</p></div>
       <div class="step"><div class="n">02</div><h3>Draft</h3><p>An agent drafts the system prompt, tool contracts, service code and schema.</p></div>
@@ -396,7 +396,7 @@
 
 <section id="work">
   <div class="wrap">
-    <div class="sec-head rv"><div class="sec-no">§06 · PROJECTS</div><div><h2>Specs, prototypes <em>&amp; code.</em></h2><p class="lede">Production systems are under client NDA, so these are illustrative write-ups in my own words and personal builds. Happy to go deeper on the design decisions in conversation.</p></div></div>
+    <div class="sec-head rv"><div class="sec-no">§06 · PROJECTS</div><div><h2>Specs <em>&amp; prototypes.</em></h2><p class="lede">Production systems are confidential and client names are under NDA, so these are illustrative write-ups in my own words and personal builds. Happy to go deeper on the design decisions in conversation.</p></div></div>
     <div class="grid">
       <a class="card rv" href="writing/agentic-cs-suite.html">
         <span class="kind">Illustrative PRD</span>
@@ -406,18 +406,18 @@
       </a>
       <a class="card rv" href="writing/whatsapp-queue.html">
         <span class="kind">Illustrative PRD</span>
-        <h3>Multi-tenant WhatsApp AI queue</h3>
+        <h3>Multi-tenant WhatsApp queue</h3>
         <p>Scaling a multi-tenant queue across 200+ tenant accounts: isolation, P1/P2/P3 routing and 50-thread concurrency.</p>
         <span class="go">Read the PRD →</span>
       </a>
       <a class="card rv" href="https://vijayraman1998.github.io/porter-first-trip-prototype/" target="_blank" rel="noopener">
         <span class="kind">Prototype · Live</span>
         <h3>First-trip booking flow</h3>
-        <p>Concept prototype from a PM capstone on first-time-user conversion for intra-city goods transport. Not affiliated with Porter.</p>
+        <p>Concept prototype on first-time-user conversion for intra-city goods transport. Not affiliated with Porter.</p>
         <span class="go">Open the prototype <span aria-hidden="true">↗</span><span class="sr"> (opens in new tab)</span></span>
       </a>
     </div>
-    <p class="footnote rv">More on <a href="https://github.com/Vijayraman1998" target="_blank" rel="noopener">GitHub<span class="sr"> (opens in new tab)</span></a>: personal builds and coursework. Production code is under client NDA.</p>
+    <p class="footnote rv">More on <a href="https://github.com/Vijayraman1998" target="_blank" rel="noopener">GitHub<span class="sr"> (opens in new tab)</span></a>: personal builds and coursework. Production code is confidential.</p>
   </div>
 </section>
 

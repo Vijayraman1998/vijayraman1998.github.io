@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Illustrative PRD: Multi-Tenant WhatsApp AI Queue · Vijay Raman</title>
-<meta name="description" content="An illustrative PRD by Vijay Raman: scaling a multi-tenant WhatsApp AI queue with tenant isolation, P1/P2/P3 routing and bounded concurrency.">
+<title>Illustrative PRD: Multi-Tenant WhatsApp Queue · Vijay Raman</title>
+<meta name="description" content="An illustrative PRD by Vijay Raman: scaling a multi-tenant WhatsApp queue with tenant isolation, P1/P2/P3 routing and bounded concurrency.">
 <meta name="color-scheme" content="light dark">
 <link rel="canonical" href="https://vijayraman1998.github.io/writing/whatsapp-queue.html">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='6' fill='%23E2462B'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2016%2016'%3E%3Ccircle%20cx='8'%20cy='8'%20r='6'%20fill='%23E2462B'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Hanken+Grotesk:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -17,12 +17,12 @@
 <div class="top"><div class="in"><a href="../">← Vijay Raman</a><a href="../#work">Projects</a></div></div>
 <article>
   <div class="kind">Illustrative PRD</div>
-  <h1>Multi-Tenant WhatsApp AI Queue</h1>
+  <h1>Multi-Tenant WhatsApp Queue</h1>
   <div class="meta">Author: Vijay Raman · Illustrative · Type: Scale-up</div>
   <p class="note">An illustrative PRD in my own words, describing the kind of system I worked on. It uses no internal documents, code, client names or data.</p>
 
   <h2><span>01</span>Problem</h2>
-  <p>Enterprise clients run AI-driven customer conversations on WhatsApp. When many tenant accounts with different message priorities share one pipeline, the queue has to keep tenants isolated, respect priority and stay inside the platform's API limits as traffic grows.</p>
+  <p>Enterprise clients run customer messaging on WhatsApp. When many tenant accounts with different message priorities share one pipeline, the queue has to keep tenants isolated, respect priority and stay inside the platform's API limits as traffic grows.</p>
 
   <h2><span>02</span>Goals &amp; non-goals</h2>
   <p><strong>Goals</strong></p>
@@ -33,7 +33,7 @@
   </ul>
   <p><strong>Non-goals</strong></p>
   <ul>
-    <li>Conversation logic and agent reasoning (covered by the agentic suite, a separate PRD)</li>
+    <li>Conversation logic (covered by the agentic suite, a separate PRD)</li>
     <li>Tenant billing and onboarding UI</li>
   </ul>
 
