@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Illustrative PRD: Multi-Tenant WhatsApp AI Queue · Vijay Raman</title>
+<meta name="description" content="An illustrative PRD by Vijay Raman: scaling a multi-tenant WhatsApp AI queue with tenant isolation, P1/P2/P3 routing and bounded concurrency.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://vijayraman1998.github.io/writing/whatsapp-queue.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='6' fill='%23E2462B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Hanken+Grotesk:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="doc.css">
+</head>
+<body>
+<div class="top"><div class="in"><a href="../">← Vijay Raman</a><a href="../#work">Projects</a></div></div>
+<article>
+  <div class="kind">Illustrative PRD</div>
+  <h1>Multi-Tenant WhatsApp AI Queue</h1>
+  <div class="meta">Author: Vijay Raman · Illustrative · Type: Scale-up</div>
+  <p class="note">An illustrative PRD in my own words, describing the kind of system I worked on. It uses no internal documents, code, client names or data.</p>
+
+  <h2><span>01</span>Problem</h2>
+  <p>Enterprise clients run AI-driven customer conversations on WhatsApp. When many tenant accounts with different message priorities share one pipeline, the queue has to keep tenants isolated, respect priority and stay inside the platform's API limits as traffic grows.</p>
+
+  <h2><span>02</span>Goals &amp; non-goals</h2>
+  <p><strong>Goals</strong></p>
+  <ul>
+    <li>Serve 200+ tenant accounts concurrently with strict isolation</li>
+    <li>Zero WhatsApp API throttling</li>
+    <li>Hold the delivery SLA under 3x peak traffic</li>
+  </ul>
+  <p><strong>Non-goals</strong></p>
+  <ul>
+    <li>Conversation logic and agent reasoning (covered by the agentic suite, a separate PRD)</li>
+    <li>Tenant billing and onboarding UI</li>
+  </ul>
+
+  <h2><span>03</span>Users &amp; use cases</h2>
+  <ul>
+    <li><strong>Enterprise tenant ops teams</strong> send time-sensitive (P1), standard (P2) and bulk (P3) messages, and expect priority to be respected.</li>
+    <li><strong>Platform and SRE</strong> need predictable throughput and no cascading failures.</li>
+  </ul>
+
+  <h2><span>04</span>Requirements, prioritized</h2>
+  <table>
+    <thead><tr><th>Priority</th><th>Requirement</th></tr></thead>
+    <tbody>
+      <tr><td>P0</td><td>Per-tenant isolation so no tenant can exhaust another's quota</td></tr>
+      <tr><td>P0</td><td>Multi-priority routing: P1 &gt; P2 &gt; P3</td></tr>
+      <tr><td>P0</td><td>Respect WhatsApp API rate limits, with zero throttling</td></tr>
+      <tr><td>P1</td><td>Concurrency to absorb 3x peak (50-thread design)</td></tr>
+    </tbody>
+  </table>
+
+  <h2><span>05</span>Key trade-offs</h2>
+  <ul>
+    <li><strong>Priority model over pure FIFO.</strong> P1/P2/P3 routing so time-sensitive messages never queue behind bulk campaigns.</li>
+    <li><strong>Bounded concurrency.</strong> A 50-thread design with tenant isolation, sized to absorb 3x peak traffic at full SLA.</li>
+  </ul>
+
+  <h2><span>06</span>Success metrics</h2>
+  <ul>
+    <li><strong>0</strong> throttling incidents over 60+ days (primary)</li>
+    <li>Full SLA held under <strong>3x</strong> peak traffic</li>
+    <li><strong>200+</strong> tenant accounts on the queue</li>
+  </ul>
+
+  <h2><span>07</span>Outcome</h2>
+  <p>Shipped and stable: zero throttling over 60+ days, and 3x peak absorbed at full SLA.</p>
+
+  <a class="back" href="../#work">← Back to the portfolio</a>
+</article>
+</body>
+</html>

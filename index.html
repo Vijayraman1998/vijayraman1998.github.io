@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vijay Raman · Product Engineer & Product Owner · Voice & Agentic AI</title>
+<meta name="description" content="Vijay Raman builds real-time voice and agentic AI products end to end: customer discovery, specification, build, deployment and iteration on live traffic.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://vijayraman1998.github.io/">
+<meta property="og:title" content="Vijay Raman · Product Engineer & Product Owner">
+<meta property="og:description" content="I sit with the customer, write the spec, then build and deploy it. Real-time voice and agentic AI.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://vijayraman1998.github.io/">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='6' fill='%23E2462B'/%3E%3C/svg%3E">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F2EEE4; --paper-2:#E9E3D6; --ink:#15140F; --ink-2:#4A473E; --ink-3:#6B675C;
+    --rule:#CFC7B5; --signal:#C0381E; --signal-soft:#F6D9CF; --card:#FBF9F4;
+    --serif:"Instrument Serif", Georgia, serif;
+    --sans:"Hanken Grotesk", system-ui, sans-serif;
+    --mono:"JetBrains Mono", ui-monospace, monospace;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --paper:#12110E; --paper-2:#1B1A16; --ink:#EEE9DD; --ink-2:#BDB7A8; --ink-3:#8A8577;
+      --rule:#34312A; --signal:#FF6A4D; --signal-soft:#3A1E17; --card:#191814;
+    }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:72px}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.35;
+    background-image:radial-gradient(var(--rule) .6px, transparent .6px);background-size:22px 22px}
+  a{color:inherit}
+  a:focus-visible{outline:2px solid var(--signal);outline-offset:3px}
+  h1,h2,h3{text-wrap:balance}
+  p{text-wrap:pretty}
+  .wrap{position:relative;z-index:1;max-width:1120px;margin:0 auto;padding:0 28px}
+  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .skip{position:absolute;left:-9999px;top:8px;z-index:10;background:var(--ink);color:var(--paper);padding:8px 12px;font-family:var(--mono);font-size:13px}
+  .skip:focus{left:16px}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:5;background:var(--paper);background:color-mix(in srgb,var(--paper) 88%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+  .mark{font-family:var(--mono);font-size:13px;font-weight:600;text-decoration:none;display:flex;align-items:center;gap:10px;white-space:nowrap}
+  .dot{width:9px;height:9px;border-radius:50%;background:var(--signal);animation:pulse 2.4s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--signal) 60%,transparent)}70%{box-shadow:0 0 0 9px transparent}100%{box-shadow:0 0 0 0 transparent}}
+  nav ul{display:flex;gap:24px;list-style:none;font-size:14px}
+  nav ul a{text-decoration:none;color:var(--ink-2)}
+  nav ul a:hover{color:var(--signal)}
+
+  /* hero */
+  header.hero{padding:92px 0 56px;border-bottom:1px solid var(--rule)}
+  .eyebrow{font-family:var(--mono);font-size:12.5px;text-transform:uppercase;letter-spacing:.14em;color:var(--ink-3);display:flex;gap:14px;flex-wrap:wrap}
+  .eyebrow b{color:var(--signal);font-weight:600}
+  h1{font-family:var(--serif);font-weight:400;font-size:clamp(54px,9vw,118px);line-height:.92;letter-spacing:-.02em;margin:22px 0 0}
+  h1 em{font-style:italic;color:var(--signal)}
+  .roles{font-family:var(--serif);font-size:clamp(26px,3.4vw,40px);line-height:1.1;margin-top:14px;color:var(--ink-2)}
+  .roles span{font-style:italic}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:end;margin-top:46px}
+  .thesis{font-size:21px;line-height:1.5;max-width:580px}
+  .thesis strong{background:linear-gradient(transparent 62%,var(--signal-soft) 62%);font-weight:600}
+  .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+  .btn{font-family:var(--mono);font-size:13px;text-decoration:none;padding:11px 16px;border:1px solid var(--ink);border-radius:2px;display:inline-flex;gap:8px;align-items:center;transition:transform .15s, background .15s, color .15s}
+  .btn:hover,.btn:focus-visible{transform:translateY(-2px)}
+  .btn.primary{background:var(--ink);color:var(--paper)}
+  .btn.primary:hover{background:var(--signal);border-color:var(--signal);color:#fff}
+  .btn:not(.primary):hover{border-color:var(--signal);color:var(--signal)}
+
+  /* waveform */
+  .wave{height:150px;display:flex;align-items:center;gap:4px;padding:18px;border:1px solid var(--rule);background:var(--card);position:relative}
+  .wave::before{content:"LIVE · STT → LLM → TTS";position:absolute;top:10px;left:14px;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--ink-3)}
+  .wave::after{content:"< 500 ms transcript → first audio";position:absolute;bottom:10px;right:14px;font-family:var(--mono);font-size:10.5px;color:var(--signal)}
+  .wave i{flex:1;background:var(--ink);border-radius:2px;height:12%;animation:talk 1.6s ease-in-out infinite;transform-origin:center}
+  .wave i:nth-child(3n){background:var(--signal)}
+  @keyframes talk{0%,100%{height:10%}50%{height:var(--h,60%)}}
+
+  /* sections */
+  section{padding:88px 0;border-bottom:1px solid var(--rule)}
+  .sec-head{display:grid;grid-template-columns:180px 1fr;gap:28px;margin-bottom:48px;align-items:baseline}
+  .sec-no{font-family:var(--mono);font-size:12.5px;color:var(--signal);letter-spacing:.1em}
+  h2{font-family:var(--serif);font-weight:400;font-size:clamp(36px,5vw,58px);line-height:1;letter-spacing:-.01em}
+  h2 em{font-style:italic}
+  .lede{color:var(--ink-2);max-width:640px;margin-top:14px}
+
+  /* metrics */
+  .metrics{display:grid;grid-template-columns:repeat(5,1fr);border-top:2px solid var(--ink);border-bottom:1px solid var(--rule)}
+  .metric{padding:26px 18px 22px;border-right:1px solid var(--rule)}
+  .metric:last-child{border-right:0}
+  .metric .v{font-family:var(--serif);font-size:clamp(40px,4.6vw,60px);line-height:1}
+  .metric .v small{font-size:.5em;color:var(--signal)}
+  .metric .k{font-family:var(--mono);font-size:11.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-3);margin-top:12px;line-height:1.45}
+  .footnote{font-size:13px;color:var(--ink-3);margin-top:14px}
+
+  /* experience */
+  .roles-list{display:grid;gap:0;border-top:2px solid var(--ink)}
+  .role{display:grid;grid-template-columns:200px 1fr;gap:28px;padding:28px 0;border-bottom:1px solid var(--rule)}
+  .role .when{font-family:var(--mono);font-size:13px;color:var(--ink-3)}
+  .role h3{font-family:var(--serif);font-weight:400;font-size:28px;line-height:1.1}
+  .role p{color:var(--ink-2);margin-top:8px;max-width:720px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+  .chip{font-family:var(--mono);font-size:11.5px;padding:5px 9px;border:1px solid var(--rule);border-radius:999px;color:var(--ink-2)}
+
+  /* two hats */
+  .hats{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--ink)}
+  .hat{padding:38px 34px;position:relative}
+  .hat + .hat{border-left:1px solid var(--ink)}
+  .hat h3{font-family:var(--serif);font-weight:400;font-size:38px;line-height:1}
+  .hat h3 em{color:var(--signal)}
+  .hat .tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin-bottom:14px}
+  .hat ul{list-style:none;margin-top:22px}
+  .hat li{padding:12px 0;border-top:1px dashed var(--rule);display:grid;grid-template-columns:22px 1fr;gap:8px}
+  .hat li::before{content:"→";color:var(--signal);font-family:var(--mono)}
+  .stack{margin-top:34px}
+  .stack h3{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);font-weight:400;margin-bottom:12px}
+
+  /* decision records */
+  .records{display:grid;gap:22px}
+  .rec{display:grid;grid-template-columns:120px 1fr;border:1px solid var(--rule);background:var(--card);transition:border-color .2s}
+  .rec:hover{border-color:var(--ink-3)}
+  .rec .id{border-right:1px solid var(--rule);padding:26px 18px;font-family:var(--mono);font-size:12px;color:var(--ink-3)}
+  .rec .id b{display:block;font-size:30px;font-family:var(--serif);font-weight:400;color:var(--signal);margin-bottom:6px}
+  .rec .body{padding:26px 30px}
+  .rec h3{font-family:var(--serif);font-weight:400;font-size:30px;line-height:1.1}
+  .rec dl{display:grid;grid-template-columns:110px 1fr;gap:10px 18px;margin-top:18px;font-size:15.5px}
+  .rec dt{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);padding-top:3px}
+  .rec dd.result{font-weight:600}
+  .rec dd.result span{color:var(--signal)}
+
+  /* pipeline */
+  .pipe{display:grid;grid-template-columns:repeat(6,1fr);gap:0;position:relative;margin-top:8px}
+  .step{border:1px solid var(--ink);margin-left:-1px;padding:20px 16px 24px;background:var(--card);min-height:170px;position:relative}
+  .step .n{font-family:var(--mono);font-size:11px;color:var(--ink-3)}
+  .step h3{font-family:var(--serif);font-weight:400;font-size:22px;line-height:1.1;margin:10px 0 8px;hyphens:auto}
+  .step p{font-size:14px;color:var(--ink-2);line-height:1.45}
+  .step.gate{background:var(--ink);color:var(--paper)}
+  .step.gate p,.step.gate .n{color:color-mix(in srgb,var(--paper) 78%,transparent)}
+  .loop{margin:0 0 0 calc(100%/12*3);width:calc(100%/6*3);height:38px;border:2px dashed var(--signal);border-top:0;border-radius:0 0 12px 12px;position:relative}
+  .loop span{position:absolute;bottom:-11px;left:50%;transform:translateX(-50%);background:var(--paper);padding:0 10px;font-family:var(--mono);font-size:11.5px;color:var(--signal);white-space:nowrap}
+  .pipe-note{margin-top:34px;max-width:720px;color:var(--ink-2)}
+
+  /* work grid */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .card{border:1px solid var(--rule);background:var(--card);padding:24px;text-decoration:none;display:flex;flex-direction:column;gap:10px;transition:border-color .2s, transform .2s;min-height:210px}
+  .card:hover,.card:focus-visible{border-color:var(--signal);transform:translateY(-4px)}
+  .card .kind{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--signal)}
+  .card h3{font-family:var(--serif);font-weight:400;font-size:26px;line-height:1.1}
+  .card p{font-size:14.5px;color:var(--ink-2);flex:1}
+  .card .go{font-family:var(--mono);font-size:12px;color:var(--ink-3)}
+  .card:hover .go{color:var(--signal)}
+
+  /* contact */
+  .contact{padding:110px 0 70px}
+  .contact h2{font-size:clamp(46px,7.5vw,96px)}
+  .contact .links{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+  footer{padding:26px 0 40px;font-family:var(--mono);font-size:12px;color:var(--ink-3);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+  /* reveal (only when JS runs) */
+  .js .rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease, transform .7s ease}
+  .js .rv.in{opacity:1;transform:none}
+  .js .hero .rv{animation:rise .9s cubic-bezier(.2,.7,.2,1) forwards}
+  .js .hero .rv:nth-child(2){animation-delay:.08s}.js .hero .rv:nth-child(3){animation-delay:.16s}
+  @keyframes rise{to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none!important;transition:none!important}
+    html{scroll-behavior:auto}
+    .js .rv{opacity:1!important;transform:none!important}
+    .wave i{height:var(--h,40%)}
+  }
+  @media print{ .js .rv{opacity:1!important;transform:none!important} nav,.wave,.skip{display:none} body::before{display:none} }
+
+  @media (max-width:1100px){
+    .pipe{grid-template-columns:repeat(3,1fr)}
+    .step{margin-top:-1px}
+    .loop{display:none}
+  }
+  @media (max-width:900px){
+    nav ul{gap:16px;overflow-x:auto;scrollbar-width:none;font-size:13px;margin-left:16px;white-space:nowrap}
+    nav ul::-webkit-scrollbar{display:none}
+    nav ul li:nth-child(-n+3){display:none}
+    .hero-grid,.hats{grid-template-columns:1fr}
+    .hat + .hat{border-left:0;border-top:1px solid var(--ink)}
+    .metrics{grid-template-columns:repeat(2,1fr);border-bottom:0}
+    .metric{border-bottom:1px solid var(--rule)}
+    .metric:nth-child(2n){border-right:0}
+    .metric:last-child{grid-column:1/-1}
+    .sec-head,.role{grid-template-columns:1fr;gap:10px}
+    .pipe{grid-template-columns:repeat(2,1fr)}
+    .grid{grid-template-columns:1fr}
+    .rec{grid-template-columns:1fr}
+    .rec .id{border-right:0;border-bottom:1px solid var(--rule);padding:16px 22px}
+    .rec dl{grid-template-columns:1fr;gap:4px}
+    .rec dd{margin-bottom:10px}
+  }
+  @media (max-width:520px){
+    .wrap{padding:0 16px}
+    header.hero{padding-top:56px}
+    .metrics{grid-template-columns:1fr}
+    .metric{border-right:0}
+    .pipe{grid-template-columns:1fr}
+    nav ul li:nth-child(-n+4){display:none}
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#impact">Skip to content</a>
+
+<nav aria-label="Sections">
+  <div class="wrap">
+    <a class="mark" href="#top"><span class="dot" aria-hidden="true"></span>VIJAY RAMAN</a>
+    <ul>
+      <li><a href="#impact">Impact</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#decisions">Case studies</a></li>
+      <li><a href="#work">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="eyebrow rv"><span><b aria-hidden="true">●</b> Real-time voice &amp; agentic AI</span><span>Noida, India</span><span>M.Sc. CS, NIT Trichy</span></div>
+    <h1 class="rv">Vijay <em>Raman</em></h1>
+    <p class="roles rv">Product Engineer <span>&amp;</span> Product Owner</p>
+
+    <div class="hero-grid">
+      <div>
+        <p class="thesis">I sit with the customer, <strong>write the spec, then build and deploy it.</strong> 4+ years turning ambiguous enterprise problems into shipped software, the last 2+ owning AI voice agents end to end for enterprise clients in lending, automotive and sales.</p>
+        <div class="cta">
+          <a class="btn primary" href="mailto:ramanvijay2878@gmail.com">Email me</a>
+          <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Résumé (PDF)<span class="sr"> (opens in new tab)</span></a>
+          <a class="btn" href="https://www.linkedin.com/in/vijay-raman-a6b947178/" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span><span class="sr"> (opens in new tab)</span></a>
+          <a class="btn" href="https://github.com/Vijayraman1998" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span><span class="sr"> (opens in new tab)</span></a>
+        </div>
+      </div>
+      <div class="wave" aria-hidden="true" id="wave"></div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="impact">
+  <div class="wrap">
+    <div class="sec-head rv"><div class="sec-no">§01 · IMPACT</div><div><h2>Numbers from <em>live deployments.</em></h2></div></div>
+    <div class="metrics rv">
+      <div class="metric"><div class="v">800K<small>/day</small></div><div class="k">Call-pipeline events on the platform (events, not calls)</div></div>
+      <div class="metric"><div class="v">70<small>%+</small></div><div class="k">Automated containment, no human transfer</div></div>
+      <div class="metric"><div class="v">&lt;500<small>ms</small></div><div class="k">Final transcript to first audio byte</div></div>
+      <div class="metric"><div class="v">15<small>+</small></div><div class="k">Production agent deployments</div></div>
+      <div class="metric"><div class="v">50–80<small>%</small></div><div class="k">Lower cost per conversation vs a human agent (modeled per client)</div></div>
+    </div>
+    <p class="footnote rv">Across 5 enterprise clients in lending, automotive and sales; client names are under NDA. Containment counts only when the caller did not need a human. The cost figure is modeled per client on that client's own call mix.</p>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head rv"><div class="sec-no">§02 · EXPERIENCE</div><div><h2>Where the work <em>happened.</em></h2></div></div>
+    <div class="roles-list">
+      <div class="role rv">
+        <div class="when">JAN 2024 – PRESENT<br>Rezo.AI · Noida</div>
+        <div>
+          <h3>AI Platform: voice agents, end to end</h3>
+          <p>Led the AI agent work end to end: customer discovery, specification, build, deployment and iteration on live traffic. The single technical owner on each client engagement, through UAT, go-live and post-launch tuning.</p>
+          <div class="chips"><span class="chip">Azure OpenAI</span><span class="chip">RAG</span><span class="chip">Evals</span><span class="chip">Streaming voice</span><span class="chip">OpenAI · Azure · ElevenLabs · Google TTS</span><span class="chip">Java · Spring</span></div>
+        </div>
+      </div>
+      <div class="role rv">
+        <div class="when">AUG 2022 – DEC 2023<br>Rezo.AI · Noida</div>
+        <div>
+          <h3>Platform &amp; integrations layer</h3>
+          <p>Worked on the integration surface that customer deployments land on: 13+ external systems including client CRMs, telephony and IVR. Delivered 85+ REST APIs, cut deployment failures 30% through CI/CD work across the Java microservices, and led delivery of a QA automation platform while mentoring 3 junior engineers.</p>
+          <div class="chips"><span class="chip">Microservices</span><span class="chip">RabbitMQ</span><span class="chip">MySQL</span><span class="chip">JWT · OAuth2</span><span class="chip">React · TypeScript</span></div>
+        </div>
+      </div>
+      <div class="role rv">
+        <div class="when">2020 – 2022<br>NIT Tiruchirappalli</div>
+        <div>
+          <h3>M.Sc., Computer Science</h3>
+          <p>Preceded by a B.Sc. in Statistics, University of Delhi (2017 – 2020).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head rv"><div class="sec-no">§03 · TWO HATS</div><div><h2>One person, <em>both sides</em> of the spec.</h2><p class="lede">Product judgment and engineering are the same job for me. I decide what to build from evaluation data rather than opinion, and then I build it.</p></div></div>
+    <div class="hats rv">
+      <div class="hat">
+        <div class="tag">Product Owner</div>
+        <h3>Decide <em>what</em> &amp; why</h3>
+        <ul>
+          <li>Run discovery with client product, operations and compliance teams who arrive with a goal and no written spec</li>
+          <li>Turn that goal into agent scope, tool contracts, escalation rules and success criteria before code is written</li>
+          <li>Set the metric before the build: containment, handle time, cost per conversation, instrumented from day one</li>
+          <li>Cut launches to the intents that carry the volume, defer the long tail, and let real traffic shape the rest</li>
+        </ul>
+      </div>
+      <div class="hat">
+        <div class="tag">Product Engineer</div>
+        <h3>Build <em>how</em> &amp; ship</h3>
+        <ul>
+          <li>Streaming STT → LLM → TTS pipeline with barge-in, interruption handling and turn-taking</li>
+          <li>Multi-agent systems on Azure OpenAI with 7+ typed tools per agent and live CRM reads and writes mid-conversation</li>
+          <li>Retrieval-augmented generation (RAG) on a Java stack, with evaluation sets built from real client traffic</li>
+          <li>Java and Spring microservices, 85+ REST APIs, RabbitMQ, 13+ external integrations over JWT and OAuth2</li>
+        </ul>
+      </div>
+    </div>
+    <div class="stack rv">
+      <h3>Skills</h3>
+      <div class="chips">
+        <span class="chip">Voice AI</span><span class="chip">Conversational AI · CCaaS</span><span class="chip">Streaming STT → LLM → TTS</span><span class="chip">LLM tool calling</span><span class="chip">Multi-agent orchestration</span><span class="chip">RAG</span><span class="chip">LLM-as-judge evals</span><span class="chip">Prompt engineering</span><span class="chip">Java 17 · Spring Boot</span><span class="chip">RabbitMQ · Kafka</span><span class="chip">MySQL · PostgreSQL</span><span class="chip">Docker · AWS · Azure</span><span class="chip">React · TypeScript</span><span class="chip">MCP</span><span class="chip">PRDs · UAT</span><span class="chip">Client-facing delivery</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="decisions">
+  <div class="wrap">
+    <div class="sec-head rv"><div class="sec-no">§04 · CASE STUDIES</div><div><h2>Calls I made, and <em>what the data said.</em></h2><p class="lede">Four decisions from production work, written the way I write them up for a team: the context, the call, and the result.</p></div></div>
+    <div class="records">
+      <article class="rec rv">
+        <div class="id"><b>01</b>LATENCY</div>
+        <div class="body">
+          <h3>Make the voice agent faster without a pricier model</h3>
+          <dl>
+            <dt>Context</dt><dd>Callers notice dead air. The obvious fix was a faster, costlier model.</dd>
+            <dt>Decision</dt><dd>Instrumented every stage separately. LLM first-token latency dominated, so I shipped end-to-end streaming where speech synthesis starts on the first completed sentence.</dd>
+            <dt>Result</dt><dd class="result">Time from final transcript to first audio held <span>under 500 ms</span>. Same model, same cost.</dd>
+          </dl>
+        </div>
+      </article>
+      <article class="rec rv">
+        <div class="id"><b>02</b>EVALUATION</div>
+        <div class="body">
+          <h3>Reverse my own proposal when the evaluation disagreed</h3>
+          <dl>
+            <dt>Context</dt><dd>Team consensus, mine included, was that answer quality needed a larger model.</dd>
+            <dt>Decision</dt><dd>Built an evaluation framework that scores retrieval and generation separately on labeled sets from real traffic. Most failures were in retrieval, so we fixed retrieval instead.</dd>
+            <dt>Result</dt><dd class="result">Answer faithfulness up <span>35%</span> against the prior baseline at flat inference cost. The upgrade would have cost more and fixed less.</dd>
+          </dl>
+        </div>
+      </article>
+      <article class="rec rv">
+        <div class="id"><b>03</b>PLATFORM</div>
+        <div class="body">
+          <h3>Turn a services bottleneck into a self-serve product</h3>
+          <dl>
+            <dt>Context</dt><dd>Every new agent needed an engineer, so delivery, not demand, set the pace.</dd>
+            <dt>Decision</dt><dd>Specified and drove a self-serve builder so client teams configure agents, prompts and tools themselves.</dd>
+            <dt>Result</dt><dd class="result">Time to value cut from <span>about 2 weeks to hours</span>, with engineering effort moved off repeat delivery and onto the platform.</dd>
+          </dl>
+        </div>
+      </article>
+      <article class="rec rv">
+        <div class="id"><b>04</b>RELIABILITY</div>
+        <div class="body">
+          <h3>Isolate tenants so no one gets throttled</h3>
+          <dl>
+            <dt>Context</dt><dd>Many tenant accounts shared one WhatsApp pipeline, with different message priorities.</dd>
+            <dt>Decision</dt><dd>Scaled a multi-tenant queue on RabbitMQ with P1/P2/P3 priority routing, tenant isolation and 50-thread concurrency.</dd>
+            <dt>Result</dt><dd class="result"><span>200+ tenant accounts</span>, zero throttling over 60+ days, and 3x peak traffic absorbed at full SLA.</dd>
+          </dl>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="build">
+  <div class="wrap">
+    <div class="sec-head rv"><div class="sec-no">§05 · HOW I BUILD</div><div><h2>A closed loop, with a <em>human gate</em> at the end.</h2><p class="lede">The agent build pipeline I designed for production agent builds.</p></div></div>
+    <div class="pipe rv">
+      <div class="step"><div class="n">01</div><h3>Requirements</h3><p>A requirements document goes in: scope, tools, escalation rules, success metric.</p></div>
+      <div class="step"><div class="n">02</div><h3>Draft</h3><p>An agent drafts the system prompt, tool contracts, service code and schema.</p></div>
+      <div class="step"><div class="n">03</div><h3>Test cases</h3><p>It synthesizes its own test cases, edge cases included.</p></div>
+      <div class="step"><div class="n">04</div><h3>Simulate &amp; score</h3><p>LLM-driven conversation simulations, scored automatically.</p></div>
+      <div class="step"><div class="n">05</div><h3>Green suite</h3><p>Failures route back to the draft stage until every case passes.</p></div>
+      <div class="step gate"><div class="n">06 · HUMAN GATE</div><h3>QA, then client UAT</h3><p>A QA sanity pass, then client UAT, before production.</p></div>
+    </div>
+    <div class="loop rv" aria-hidden="true"><span>↺ failures loop back to the draft stage</span></div>
+    <p class="pipe-note rv">Automating the work is a speed decision. Automating the accountability would not have been. I ship day to day with agentic coding tools (Claude Code, Codex) and treat generated code like a pull request from a fast junior engineer: reviewed, tested, and debugged by handing the agent a failing test.</p>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head rv"><div class="sec-no">§06 · PROJECTS</div><div><h2>Specs, prototypes <em>&amp; code.</em></h2><p class="lede">Production systems are under client NDA, so these are illustrative write-ups in my own words and personal builds. Happy to go deeper on the design decisions in conversation.</p></div></div>
+    <div class="grid">
+      <a class="card rv" href="writing/agentic-cs-suite.html">
+        <span class="kind">Illustrative PRD</span>
+        <h3>Agentic AI customer-service suite</h3>
+        <p>Scope, prioritized requirements, escalating rather than guessing, and output guardrails as a product surface.</p>
+        <span class="go">Read the PRD →</span>
+      </a>
+      <a class="card rv" href="writing/whatsapp-queue.html">
+        <span class="kind">Illustrative PRD</span>
+        <h3>Multi-tenant WhatsApp AI queue</h3>
+        <p>Scaling a multi-tenant queue across 200+ tenant accounts: isolation, P1/P2/P3 routing and 50-thread concurrency.</p>
+        <span class="go">Read the PRD →</span>
+      </a>
+      <a class="card rv" href="https://vijayraman1998.github.io/porter-first-trip-prototype/" target="_blank" rel="noopener">
+        <span class="kind">Prototype · Live</span>
+        <h3>First-trip booking flow</h3>
+        <p>Concept prototype from a PM capstone on first-time-user conversion for intra-city goods transport. Not affiliated with Porter.</p>
+        <span class="go">Open the prototype <span aria-hidden="true">↗</span><span class="sr"> (opens in new tab)</span></span>
+      </a>
+    </div>
+    <p class="footnote rv">More on <a href="https://github.com/Vijayraman1998" target="_blank" rel="noopener">GitHub<span class="sr"> (opens in new tab)</span></a>: personal builds and coursework. Production code is under client NDA.</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="sec-no rv">§07 · CONTACT</div>
+    <h2 class="rv">Let's talk about <em>what you're building.</em></h2>
+    <div class="links rv">
+      <a class="btn primary" href="mailto:ramanvijay2878@gmail.com">ramanvijay2878@gmail.com</a>
+      <a class="btn" href="https://www.linkedin.com/in/vijay-raman-a6b947178/" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span><span class="sr"> (opens in new tab)</span></a>
+      <a class="btn" href="https://github.com/Vijayraman1998" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span><span class="sr"> (opens in new tab)</span></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<div class="wrap"><footer><span>© 2026 Vijay Raman</span><span>Hand-built static page · hosted on GitHub Pages</span></footer></div>
+
+<script>
+  const wave = document.getElementById('wave');
+  for (let i = 0; i < 46; i++) {
+    const b = document.createElement('i');
+    const env = Math.sin((i / 45) * Math.PI);
+    b.style.setProperty('--h', (18 + env * 70 * (0.55 + Math.random() * 0.45)).toFixed(0) + '%');
+    b.style.animationDelay = (-Math.random() * 1.6).toFixed(2) + 's';
+    b.style.animationDuration = (1.1 + Math.random() * 0.9).toFixed(2) + 's';
+    wave.appendChild(b);
+  }
+  if (!('IntersectionObserver' in window)) {
+    document.documentElement.classList.remove('js');
+  } else {
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: 0.12 });
+    document.querySelectorAll('main .rv, .contact .rv').forEach(el => io.observe(el));
+  }
+</script>
+</body>
+</html>

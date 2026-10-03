@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Illustrative PRD: Agentic AI Customer-Service Suite · Vijay Raman</title>
+<meta name="description" content="An illustrative PRD by Vijay Raman: an agentic AI customer-service suite with explicit escalation triggers, output guardrails and evaluation on real traffic.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://vijayraman1998.github.io/writing/agentic-cs-suite.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='6' fill='%23E2462B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Hanken+Grotesk:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="doc.css">
+</head>
+<body>
+<div class="top"><div class="in"><a href="../">← Vijay Raman</a><a href="../#work">Projects</a></div></div>
+<article>
+  <div class="kind">Illustrative PRD</div>
+  <h1>Agentic AI Customer-Service Suite</h1>
+  <div class="meta">Author: Vijay Raman · Illustrative · Type: Platform</div>
+  <p class="note">An illustrative PRD in my own words, describing the kind of system I worked on. It uses no internal documents, code, client names or data.</p>
+
+  <h2><span>01</span>Problem</h2>
+  <p>Enterprise clients in lending, automotive and sales handle large volumes of routine customer conversations. They need AI agents that resolve those conversations end to end, hand off cleanly when a human is needed, and stay accurate and cost-bounded enough to trust in production.</p>
+
+  <h2><span>02</span>Goals &amp; non-goals</h2>
+  <p><strong>Goals</strong></p>
+  <ul>
+    <li>Resolve routine conversations with no human transfer</li>
+    <li>Keep answers faithful to the client's own data, at a bounded cost per conversation</li>
+    <li>Hand off to a human agent on explicit escalation triggers</li>
+  </ul>
+  <p><strong>Non-goals</strong></p>
+  <ul>
+    <li>Replacing human agents on complex or edge cases</li>
+    <li>Channel transport (covered by the WhatsApp queue PRD)</li>
+  </ul>
+
+  <h2><span>03</span>Users</h2>
+  <ul>
+    <li><strong>End customers</strong> want fast, correct answers.</li>
+    <li><strong>Client product, operations and compliance teams</strong> want automation plus control over scope and escalation rules.</li>
+    <li><strong>Internal engineering and ops</strong> need predictable cost and latency.</li>
+  </ul>
+
+  <h2><span>04</span>Requirements, prioritized</h2>
+  <table>
+    <thead><tr><th>Priority</th><th>Requirement</th></tr></thead>
+    <tbody>
+      <tr><td>P0</td><td>Defined agent scope per client, with typed tool calling on Azure OpenAI</td></tr>
+      <tr><td>P0</td><td>Escalation flow to a human agent on explicit escalation triggers</td></tr>
+      <tr><td>P0</td><td>Output guardrails, and structured JSON output validated before any CRM write</td></tr>
+      <tr><td>P1</td><td>Self-serve configuration so client teams launch agents, prompts and tools without engineering</td></tr>
+      <tr><td>P1</td><td>Evaluation on labeled sets from real client traffic, scoring retrieval and generation separately</td></tr>
+    </tbody>
+  </table>
+
+  <h2><span>05</span>Key trade-offs</h2>
+  <ul>
+    <li><strong>Escalation before autonomy.</strong> Explicit escalation triggers bound what the agent attempts alone, trading a little capability for predictable cost and caller experience. Containment only counts when the caller did not need a human.</li>
+    <li><strong>Fix retrieval before buying a bigger model.</strong> Scoring retrieval and generation separately showed that most failures were in retrieval, which is cheaper to fix than a model upgrade.</li>
+    <li><strong>Guardrails as a product surface.</strong> Validated output and clear hand-off rules are what make clients willing to put an agent in front of real customers.</li>
+  </ul>
+
+  <h2><span>06</span>Success metrics</h2>
+  <ul>
+    <li><strong>70%+</strong> automated containment, with explicit escalation triggers</li>
+    <li><strong>50–80%</strong> lower cost per conversation than a human agent, modeled per client on that client's own call mix</li>
+    <li>Average handle time <strong>10–30%</strong> shorter on most use cases</li>
+    <li>Answer faithfulness scored on labeled sets from real client traffic (up <strong>35%</strong> after the retrieval fix)</li>
+  </ul>
+
+  <h2><span>07</span>Outcome</h2>
+  <p>Shipped across 15+ production deployments for 5 enterprise clients.</p>
+
+  <a class="back" href="../#work">← Back to the portfolio</a>
+</article>
+</body>
+</html>
