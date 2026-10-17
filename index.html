@@ -11,12 +11,42 @@
 <meta property="og:description" content="I sit with the customer, write the spec, then build and deploy it. Real-time voice and agentic AI.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://vijayraman1998.github.io/">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://vijayraman1998.github.io/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Vijay Raman, Product Engineer and Product Owner, real-time voice and agentic AI">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://vijayraman1998.github.io/og.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "url": "https://vijayraman1998.github.io/",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Vijay Raman",
+    "jobTitle": "Product Engineer & Product Owner",
+    "description": "Builds real-time voice and agentic AI products end to end: customer discovery, specification, build, deployment and iteration on live traffic.",
+    "url": "https://vijayraman1998.github.io/",
+    "image": "https://vijayraman1998.github.io/og.png",
+    "email": "mailto:ramanvijay2878@gmail.com",
+    "address": {"@type": "PostalAddress", "addressLocality": "Noida", "addressCountry": "IN"},
+    "alumniOf": [
+      {"@type": "CollegeOrUniversity", "name": "National Institute of Technology Tiruchirappalli"},
+      {"@type": "CollegeOrUniversity", "name": "University of Delhi"}
+    ],
+    "knowsAbout": ["Voice AI", "Conversational AI", "Agentic AI", "Multi-agent orchestration", "LLM tool calling", "Retrieval-augmented generation", "LLM evaluation", "Streaming speech-to-text and text-to-speech", "Product management", "Java", "Spring Boot", "Model Context Protocol"],
+    "sameAs": ["https://www.linkedin.com/in/vijay-raman-a6b947178/", "https://github.com/Vijayraman1998"]
+  }
+}
+</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2016%2016'%3E%3Ccircle%20cx='8'%20cy='8'%20r='6'%20fill='%23E2462B'/%3E%3C/svg%3E">
 <script>document.documentElement.classList.add('js')</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"></noscript>
 <style>
   :root{
     --paper:#F2EEE4; --paper-2:#E9E3D6; --ink:#15140F; --ink-2:#4A473E; --ink-3:#6B675C;
@@ -49,8 +79,9 @@
   nav{position:sticky;top:0;z-index:5;background:var(--paper);background:color-mix(in srgb,var(--paper) 88%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
   nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
   .mark{font-family:var(--mono);font-size:13px;font-weight:600;text-decoration:none;display:flex;align-items:center;gap:10px;white-space:nowrap}
-  .dot{width:9px;height:9px;border-radius:50%;background:var(--signal);animation:pulse 2.4s infinite}
-  @keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--signal) 60%,transparent)}70%{box-shadow:0 0 0 9px transparent}100%{box-shadow:0 0 0 0 transparent}}
+  .dot{width:9px;height:9px;border-radius:50%;background:var(--signal);position:relative}
+  .dot::after{content:"";position:absolute;inset:0;border-radius:50%;background:var(--signal);opacity:.6;animation:pulse 2.4s infinite}
+  @keyframes pulse{0%{transform:scale(1);opacity:.6}70%{transform:scale(3);opacity:0}100%{transform:scale(3);opacity:0}}
   nav ul{display:flex;gap:24px;list-style:none;font-size:14px}
   nav ul a{text-decoration:none;color:var(--ink-2)}
   nav ul a:hover{color:var(--signal)}
@@ -77,9 +108,10 @@
   .wave{height:150px;display:flex;align-items:center;gap:4px;padding:18px;border:1px solid var(--rule);background:var(--card);position:relative}
   .wave::before{content:"LIVE · STT → LLM → TTS";position:absolute;top:10px;left:14px;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--ink-3)}
   .wave::after{content:"< 500 ms transcript → first audio";position:absolute;bottom:10px;right:14px;font-family:var(--mono);font-size:10.5px;color:var(--signal)}
-  .wave i{flex:1;background:var(--ink);border-radius:2px;height:12%;animation:talk 1.6s ease-in-out infinite;transform-origin:center}
+  .wave i{flex:1;background:var(--ink);border-radius:2px;height:var(--h,60%);transform:scaleY(.18);animation:talk 1.6s ease-in-out infinite;transform-origin:center;will-change:transform}
+  .wave.paused i{animation-play-state:paused}
   .wave i:nth-child(3n){background:var(--signal)}
-  @keyframes talk{0%,100%{height:10%}50%{height:var(--h,60%)}}
+  @keyframes talk{0%,100%{transform:scaleY(.18)}50%{transform:scaleY(1)}}
 
   /* sections */
   section{padding:88px 0;border-bottom:1px solid var(--rule)}
@@ -171,7 +203,7 @@
     *{animation:none!important;transition:none!important}
     html{scroll-behavior:auto}
     .js .rv{opacity:1!important;transform:none!important}
-    .wave i{height:var(--h,40%)}
+    .wave i{transform:none}
   }
   @media print{ .js .rv{opacity:1!important;transform:none!important} nav,.wave,.skip{display:none} body::before{display:none} }
 
@@ -445,6 +477,9 @@
     b.style.animationDelay = (-Math.random() * 1.6).toFixed(2) + 's';
     b.style.animationDuration = (1.1 + Math.random() * 0.9).toFixed(2) + 's';
     wave.appendChild(b);
+  }
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(es => wave.classList.toggle('paused', !es[0].isIntersecting)).observe(wave);
   }
   if (!('IntersectionObserver' in window)) {
     document.documentElement.classList.remove('js');

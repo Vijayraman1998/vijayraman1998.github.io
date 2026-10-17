@@ -1,0 +1,30 @@
+# Vijay Raman
+
+> Product Engineer and Product Owner in Noida, India, building real-time voice and agentic AI products end to end: customer discovery, specification, build, deployment and iteration on live traffic. M.Sc. Computer Science, NIT Tiruchirappalli.
+
+I sit with the customer, write the spec, then build and deploy it. I have 4+ years of experience turning ambiguous enterprise problems into shipped software, and for the last 2+ years I have owned AI voice agents end to end for enterprise clients in lending, automotive and sales. Client names are under NDA.
+
+## Work highlights
+
+- Single technical owner on 15+ production agent deployments for 5 enterprise clients, from discovery through UAT, go-live and post-launch tuning.
+- Built a streaming speech-to-text, LLM and text-to-speech pipeline with barge-in and turn-taking, holding under 500 ms from final transcript to first audio.
+- Built an evaluation framework that scores retrieval and generation separately on labeled sets from real traffic; fixing retrieval raised answer faithfulness 35% at flat inference cost.
+- Specified a self-serve agent builder that cut time to value from about 2 weeks to hours.
+- Scaled a multi-tenant WhatsApp queue on RabbitMQ across 200+ tenant accounts with P1/P2/P3 priority routing and tenant isolation.
+
+## Skills
+
+Voice AI, conversational AI, multi-agent orchestration, LLM tool calling, retrieval-augmented generation (RAG), LLM-as-judge evaluation, prompt engineering, Model Context Protocol (MCP), Java 17 and Spring Boot, RabbitMQ and Kafka, MySQL and PostgreSQL, Docker, AWS and Azure, React and TypeScript, PRDs and UAT, client-facing delivery.
+
+## Pages
+
+- [Portfolio home](https://vijayraman1998.github.io/): impact, experience, skills, case studies and how I build.
+- [Illustrative PRD: Agentic AI customer-service suite](https://vijayraman1998.github.io/writing/agentic-cs-suite.html): scope, prioritized requirements, escalation triggers and output guardrails.
+- [Illustrative PRD: Multi-tenant WhatsApp queue](https://vijayraman1998.github.io/writing/whatsapp-queue.html): tenant isolation, priority routing and bounded concurrency.
+- [Résumé (PDF)](https://vijayraman1998.github.io/resume.pdf)
+
+## Contact
+
+- Email: ramanvijay2878@gmail.com
+- LinkedIn: https://www.linkedin.com/in/vijay-raman-a6b947178/
+- GitHub: https://github.com/Vijayraman1998
