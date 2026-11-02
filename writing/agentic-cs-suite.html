@@ -70,7 +70,6 @@
   <h2><span>05</span>Key trade-offs</h2>
   <ul>
     <li><strong>Escalation before autonomy.</strong> Explicit escalation triggers bound what the agent attempts alone, trading a little capability for predictable cost and caller experience. Containment only counts when the caller did not need a human.</li>
-    <li><strong>Fix retrieval before buying a bigger model.</strong> Scoring retrieval and generation separately showed that most failures were in retrieval, which is cheaper to fix than a model upgrade.</li>
     <li><strong>Guardrails as a product surface.</strong> Validated output and clear hand-off rules are what make clients willing to put an agent in front of real customers.</li>
   </ul>
 
@@ -79,7 +78,7 @@
     <li><strong>70%+</strong> automated containment, with explicit escalation triggers</li>
     <li><strong>50–80%</strong> lower cost per conversation than a human agent, modeled per client on that client's own call mix</li>
     <li>Average handle time <strong>10–30%</strong> shorter on most use cases, modeled per client on that client's own call mix</li>
-    <li>Answer faithfulness scored on labeled sets from real client traffic (up <strong>35%</strong> after the retrieval fix)</li>
+    <li>Answer faithfulness scored on labeled sets from real client traffic</li>
   </ul>
 
   <h2><span>07</span>Outcome</h2>

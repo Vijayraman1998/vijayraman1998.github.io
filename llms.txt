@@ -8,7 +8,7 @@ I sit with the customer, write the spec, then build and deploy it. I have 4+ yea
 
 - Single technical owner on 15+ production agent deployments for 5 enterprise clients, from discovery through UAT, go-live and post-launch tuning.
 - Built a streaming speech-to-text, LLM and text-to-speech pipeline with barge-in and turn-taking, holding under 500 ms from final transcript to first audio.
-- Built an evaluation framework that scores retrieval and generation separately on labeled sets from real traffic; fixing retrieval raised answer faithfulness 35% at flat inference cost.
+- Built an evaluation framework that scores retrieval and generation separately on labeled sets from real traffic.
 - Specified a self-serve agent builder that cut time to value from about 2 weeks to hours.
 - Scaled a multi-tenant WhatsApp queue on RabbitMQ across 200+ tenant accounts with P1/P2/P3 priority routing and tenant isolation.
 

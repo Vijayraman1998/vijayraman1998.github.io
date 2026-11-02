@@ -360,7 +360,7 @@
 
 <section id="decisions">
   <div class="wrap">
-    <div class="sec-head rv"><div class="sec-no">§04 · CASE STUDIES</div><div><h2>Calls I made, and <em>what the data said.</em></h2><p class="lede">Four decisions from production work, written the way I write them up for a team: the context, the call, and the result.</p></div></div>
+    <div class="sec-head rv"><div class="sec-no">§04 · CASE STUDIES</div><div><h2>Calls I made, and <em>what the data said.</em></h2><p class="lede">Three decisions from production work, written the way I write them up for a team: the context, the call, and the result.</p></div></div>
     <div class="records">
       <article class="rec rv">
         <div class="id"><b>01</b>LATENCY</div>
@@ -374,18 +374,7 @@
         </div>
       </article>
       <article class="rec rv">
-        <div class="id"><b>02</b>EVALUATION</div>
-        <div class="body">
-          <h3>Reverse my own proposal when the evaluation disagreed</h3>
-          <dl>
-            <dt>Context</dt><dd>Team consensus, mine included, was that answer quality needed a larger model.</dd>
-            <dt>Decision</dt><dd>Built an evaluation framework that scores retrieval and generation separately on labeled sets from real traffic. Most failures were in retrieval, so we fixed retrieval instead.</dd>
-            <dt>Result</dt><dd class="result">Answer faithfulness up <span>35%</span> against the prior baseline at flat inference cost. The upgrade would have cost more and fixed less.</dd>
-          </dl>
-        </div>
-      </article>
-      <article class="rec rv">
-        <div class="id"><b>03</b>PLATFORM</div>
+        <div class="id"><b>02</b>PLATFORM</div>
         <div class="body">
           <h3>Turn a services bottleneck into a self-serve product</h3>
           <dl>
@@ -396,7 +385,7 @@
         </div>
       </article>
       <article class="rec rv">
-        <div class="id"><b>04</b>RELIABILITY</div>
+        <div class="id"><b>03</b>RELIABILITY</div>
         <div class="body">
           <h3>Isolate tenants so no one gets throttled</h3>
           <dl>
